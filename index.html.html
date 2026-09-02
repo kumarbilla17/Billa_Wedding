@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priyanka & Kumar Wedding Invitation</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #faf6f0;
+            --primary-color: #8b263e;
+            --text-color: #333333;
+            --accent-gold: #c59b27;
+            --card-bg: #ffffff;
+            --font-heading: 'Cormorant Garamond', serif;
+            --font-body: 'Montserrat', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            background: linear-gradient(rgba(250, 246, 240, 0.85), rgba(250, 246, 240, 0.85));
+        }
+
+        .diamond-icon {
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+            margin: 15px 0;
+        }
+
+        .sub-title {
+            letter-spacing: 3px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .names {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 15px 0;
+        }
+
+        .names span {
+            font-style: italic;
+            font-weight: 400;
+            color: var(--accent-gold);
+        }
+
+        .invitation-text {
+            max-width: 500px;
+            font-size: 0.95rem;
+            margin: 15px auto 30px;
+            color: #666;
+        }
+
+        .date-badge {
+            border-top: 1px solid var(--accent-gold);
+            border-bottom: 1px solid var(--accent-gold);
+            padding: 15px 30px;
+            margin: 20px 0;
+            display: inline-block;
+        }
+
+        .date-number {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .muhurtham {
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-top: 5px;
+            color: var(--text-color);
+            font-size: 0.85rem;
+        }
+
+        /* Main Content Section */
+        section {
+            padding: 60px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        /* Couple Section */
+        .couple-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .profile-card {
+            background: var(--card-bg);
+            padding: 30px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            width: 280px;
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-gold);
+            margin-bottom: 15px;
+        }
+
+        .profile-card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: var(--primary-color);
+        }
+
+        .ampersand {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+        }
+
+        /* Events Section */
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .event-card {
+            background: var(--card-bg);
+            padding: 30px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .event-type {
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            font-weight: 600;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+        }
+
+        .event-date {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .event-time {
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin: 5px 0 15px;
+        }
+
+        .venue {
+            font-size: 0.85rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .qr-placeholder {
+            width: 120px;
+            height: 120px;
+            margin: 10px auto;
+            border: 1px dashed var(--accent-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            color: #888;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 20px;
+            background-color: #f2e9df;
+            margin-top: 40px;
+        }
+
+        footer p {
+            max-width: 600px;
+            margin: 0 auto 15px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="diamond-icon">✦</div>
+        <div class="sub-title">WE ARE GETTING MARRIED</div>
+        <div class="diamond-icon">✦</div>
+
+        <!-- Bride First -->
+        <h1 class="names">Sai Priyanka <br><span>&amp;</span><br> Kumar</h1>
+
+        <p class="invitation-text">
+            Together with our families, we invite you to celebrate our special day and share in the joy of the beginning of our journey together.
+        </p>
+
+        <div class="date-badge">
+            <div>SATURDAY</div>
+            <div class="date-number">05</div>
+            <div><strong>SEPTEMBER</strong> • 2026</div>
+            <div class="muhurtham">MUHURTHAM • 9:37 PM</div>
+        </div>
+
+        <div class="diamond-icon">✦</div>
+        <p style="font-style: italic; font-family: var(--font-heading); font-size: 1.2rem;">A beautiful beginning awaits</p>
+    </div>
+
+    <!-- Couple Details Section -->
+    <section>
+        <div class="sub-title">THE BEGINNING OF FOREVER</div>
+        <h2>Sai Priyanka <span>&amp;</span> Kumar</h2>
+        <p>
+            With the love and blessings of our families, we are delighted to begin a beautiful new chapter of our lives together. As we celebrate the joy of our wedding, we would be honoured to have you with us.
+        </p>
+
+        <div class="couple-container">
+            <!-- Bride First -->
+            <div class="profile-card">
+                <img src="images/Bride Pic.jpg" alt="Sai Priyanka" class="profile-img" onerror="this.src='https://via.placeholder.com/140?text=Bride'">
+                <h3>Sai Priyanka</h3>
+                <p>Daughter of<br>
+                <strong>Sri Goli Ramakrishna Reddy</strong><br>&amp; <strong>Smt. Veerakumari</strong></p>
+            </div>
+
+            <div class="ampersand">&amp;</div>
+
+            <!-- Groom Second -->
+            <div class="profile-card">
+                <img src="images/Groom Pic.jpg" alt="Kumar Raja Reddy" class="profile-img" onerror="this.src='https://via.placeholder.com/140?text=Groom'">
+                <h3>Kumar Raja Reddy</h3>
+                <p>Son of<br>
+                <strong>Sri Billa Srinivasa Reddy</strong><br>&amp; <strong>Smt. Rajani</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section>
+        <div class="sub-title">JOIN US IN CELEBRATION</div>
+        <h2>Wedding Ceremonies</h2>
+
+        <div class="events-grid">
+            <!-- Bride Side Function -->
+            <div class="event-card">
+                <div class="event-type">HALDI / MEHNDI</div>
+                <div class="event-date">Thursday, 3 September 2026</div>
+                <div class="event-time">4:00 PM onwards</div>
+                <div class="venue">
+                    Bride's Residence<br>
+                    [Insert Residence Address Here]
+                </div>
+                <div class="qr-placeholder">QR Code Location</div>
+            </div>
+
+            <!-- Main Wedding Ceremony -->
+            <div class="event-card">
+                <div class="event-type">WEDDING / MUHURTHAM &amp; DINNER</div>
+                <div class="event-date">Saturday, 5 September 2026</div>
+                <div class="event-time">Dinner: 7:00 PM onwards<br>Muhurtham: 9:37 PM</div>
+                <div class="venue">
+                    Alapati Ganga Bhavani Function Hall<br>
+                    Aswaraopet Road, Jangareddygudem
+                </div>
+                <div class="qr-placeholder">QR Code Location</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="sub-title">WITH LOVE</div>
+        <h2>We Can't Wait To Celebrate With You</h2>
+        <p>Your presence will make our celebration even more special. We warmly invite you and your family to join us, share our happiness, and shower us with your love and blessings.</p>
+        <p style="font-weight: 600; color: var(--primary-color);">— Goli Family</p>
+    </footer>
+
+</body>
+</html>
